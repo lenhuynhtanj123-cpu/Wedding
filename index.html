@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Anh & Quang Huy — Save The Date</title>
+    <meta name="description" content="Trang web đám cưới của Minh Anh và Quang Huy. Rất hân hạnh được đón tiếp bạn trong ngày trọng đại của chúng tôi.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./wedding.css">
+</head>
+<body>
+
+    <!-- ===== Loading mở màn ===== -->
+    <div class="loader" id="loader">
+        <div class="loader-heart">&hearts;</div>
+        <p class="loader-names">Minh Anh &amp; Quang Huy</p>
+    </div>
+
+    <!-- ===== Nhạc nền ===== -->
+    <button class="music-toggle" id="musicToggle" aria-label="Bật/tắt nhạc nền" title="Bật/tắt nhạc nền">
+        <span class="music-icon">&#9835;</span>
+    </button>
+
+    <!-- Trình phát SoundCloud nhúng (được ẩn, điều khiển bằng nút nhạc) -->
+    <div class="sc-player-wrap" aria-hidden="true">
+        <iframe id="scFrame" class="sc-player" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1603505106&amp;color=%23c9a227&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_teaser=false&amp;visual=false"></iframe>
+    </div>
+
+    <!-- ===== Thanh điều hướng ===== -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-brand">M <span>&amp;</span> H</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#couple">Cô dâu &amp; Chú rể</a></li>
+            <li><a href="#story">Chuyện tình yêu</a></li>
+            <li><a href="#events">Sự kiện</a></li>
+            <li><a href="#gallery">Album ảnh</a></li>
+            <li><a href="#rsvp">Gửi lời chúc</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ===== Hero / Save the date ===== -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-save">Save The Date</p>
+            <h1 class="hero-names">
+                <span class="name">Minh Anh</span>
+                <span class="amp">&amp;</span>
+                <span class="name">Quang Huy</span>
+            </h1>
+            <p class="hero-date">20 . 12 . 2026</p>
+
+            <!-- Đếm ngược -->
+            <div class="countdown" id="countdown">
+                <div class="cd-box"><span id="cdDays">00</span><small>Ngày</small></div>
+                <div class="cd-box"><span id="cdHours">00</span><small>Giờ</small></div>
+                <div class="cd-box"><span id="cdMinutes">00</span><small>Phút</small></div>
+                <div class="cd-box"><span id="cdSeconds">00</span><small>Giây</small></div>
+            </div>
+
+            <a href="#events" class="btn">Xem chi tiết</a>
+        </div>
+        <div class="scroll-hint"><span></span></div>
+    </header>
+    <main>
+        <!-- ===== Cô dâu & Chú rể ===== -->
+        <section class="section couple" id="couple">
+            <div class="section-title reveal">
+                <p class="sub">Ngày vui</p>
+                <h2>Cô dâu &amp; Chú rể</h2>
+            </div>
+            <div class="couple-grid">
+                <article class="person reveal">
+                    <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80')"></div>
+                    <h3>Nguyễn Minh Anh</h3>
+                    <p class="role">Cô dâu</p>
+                    <p class="bio">Là cô gái dịu dàng, yêu cái đẹp và tin vào những điều giản dị. Em khiến cuộc đời anh thêm phần rực rỡ.</p>
+                    <ul class="socials">
+                        <li><a href="#" aria-label="Facebook">f</a></li>
+                        <li><a href="#" aria-label="Instagram">ig</a></li>
+                    </ul>
+                </article>
+                <div class="couple-heart reveal">&hearts;</div>
+                <article class="person reveal">
+                    <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80')"></div>
+                    <h3>Trần Quang Huy</h3>
+                    <p class="role">Chú rể</p>
+                    <p class="bio">Chàng trai điềm đạm, chu toàn và luôn biết cách làm em cười. Anh hạnh phúc vì đã tìm thấy em.</p>
+                    <ul class="socials">
+                        <li><a href="#" aria-label="Facebook">f</a></li>
+                        <li><a href="#" aria-label="Instagram">ig</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== Chuyện tình yêu ===== -->
+        <section class="section story" id="story">
+            <div class="section-title reveal">
+                <p class="sub">Hành trình của chúng tôi</p>
+                <h2>Chuyện tình yêu</h2>
+            </div>
+            <div class="timeline">
+                <div class="t-item reveal">
+                    <div class="t-year">2019</div>
+                    <div class="t-body">
+                        <h3>Lần đầu gặp gỡ</h3>
+                        <p>Chúng tôi gặp nhau lần đầu trong một buổi chiều mưa tại thư viện trường. Một câu chuyện bắt đầu từ ly cà phê quên mang đi.</p>
+                    </div>
+                </div>
+                <div class="t-item reveal">
+                    <div class="t-year">2021</div>
+                    <div class="t-body">
+                        <h3>Bắt đầu hẹn hò</h3>
+                        <p>Sau bao lần do dự, cuối cùng anh cũng ngỏ lời. Và em đã đồng ý trong một buổi hoàng hôn bên bờ hồ.</p>
+                    </div>
+                </div>
+                <div class="t-item reveal">
+                    <div class="t-year">2024</div>
+                    <div class="t-body">
+                        <h3>Gặp gia đình hai bên</h3>
+                        <p>Hai bên gia đình gặp mặt và dành cho nhau rất nhiều tình cảm. Tất cả đều ủng hộ cho hành trình phía trước của chúng tôi.</p>
+                    </div>
+                </div>
+                <div class="t-item reveal">
+                    <div class="t-year">2026</div>
+                    <div class="t-body">
+                        <h3>Cầu hôn &amp; ngày cưới</h3>
+                        <p>Anh đã quỳ gối trao nhẫn dưới ánh nến, và em đã khóc òa trong vòng tay anh. Giờ đây, chúng tôi chuẩn bị cho ngày trọng đại nhất cuộc đời.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== Sự kiện ===== -->
+        <section class="section events" id="events">
+            <div class="section-title reveal">
+                <p class="sub">Trân trọng kính mời</p>
+                <h2>Sự kiện chính</h2>
+            </div>
+            <div class="event-grid">
+                <article class="event-card reveal">
+                    <div class="event-icon">&#9730;</div>
+                    <h3>Lễ vu quy</h3>
+                    <p class="event-time"><strong>08:00</strong> — Chủ Nhật, 20/12/2026</p>
+                    <p class="event-place">Tư gia nhà gái<br>123 Đường Hoa Hồng, Quận 1, TP. Hồ Chí Minh</p>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline">Chỉ đường</a>
+                </article>
+                <article class="event-card reveal">
+                    <div class="event-icon">&#10084;</div>
+                    <h3>Lễ thành hôn &amp; Tiệc cưới</h3>
+                    <p class="event-time"><strong>18:00</strong> — Chủ Nhật, 20/12/2026</p>
+                    <p class="event-place">Trung tâm Tiệc cưới Diamond Palace<br>456 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline">Chỉ đường</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== Album ảnh ===== -->
+        <section class="section gallery" id="gallery">
+            <div class="section-title reveal">
+                <p class="sub">Khoảnh khắc</p>
+                <h2>Album ảnh cưới</h2>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <a class="g-item reveal" href="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80')"></a>
+                <a class="g-item reveal" href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&q=80" style="background-image:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80')"></a>
+                <a class="g-item reveal" href="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1200&q=80" style="background-image:url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80')"></a>
+                <a class="g-item reveal" href="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200&q=80" style="background-image:url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80')"></a>
+                <a class="g-item reveal" href="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1200&q=80" style="background-image:url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=600&q=80')"></a>
+                <a class="g-item reveal" href="https://images.unsplash.com/photo-1470816692435-2af6e79d3290?w=1200&q=80" style="background-image:url('https://images.unsplash.com/photo-1470816692435-2af6e79d3290?w=600&q=80')"></a>
+            </div>
+        </section>
+
+        <!-- ===== RSVP / Gửi lời chúc ===== -->
+        <section class="section rsvp" id="rsvp">
+            <div class="section-title reveal">
+                <p class="sub">Hãy cho chúng tôi biết</p>
+                <h2>Xác nhận &amp; Gửi lời chúc</h2>
+            </div>
+            <form class="rsvp-form reveal" id="rsvpForm" novalidate>
+                <div class="field">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email / Số điện thoại</label>
+                    <input type="text" id="email" name="email" placeholder="ban@email.com" required>
+                </div>
+                <div class="field">
+                    <label for="attend">Bạn sẽ tham dự chứ?</label>
+                    <select id="attend" name="attend" required>
+                        <option value="" disabled selected>-- Chọn --</option>
+                        <option value="yes">Tôi sẽ tham dự 🎉</option>
+                        <option value="no">Rất tiếc, tôi không thể đến 😢</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="guests">Số người đi cùng</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1 người</option>
+                        <option value="2">2 người</option>
+                        <option value="3">3 người</option>
+                        <option value="4">4 người</option>
+                    </select>
+                </div>
+                <div class="field field-full">
+                    <label for="wish">Lời chúc gửi đến cô dâu chú rể</label>
+                    <textarea id="wish" name="wish" rows="4" placeholder="Gửi những lời chúc tốt đẹp nhất đến đôi uyên ương..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-full">Gửi xác nhận</button>
+                <p class="form-msg" id="formMsg" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===== Lời cảm ơn ===== -->
+    <footer class="thanks" id="thanks">
+        <div class="thanks-inner reveal">
+            <p class="script">Thank you!</p>
+            <h2>Sự hiện diện của bạn<br>là món quà ý nghĩa nhất</h2>
+            <p class="thanks-names">Minh Anh &amp; Quang Huy</p>
+            <p class="thanks-date">20 . 12 . 2026</p>
+            <a href="#hero" class="btn btn-outline">Về đầu trang</a>
+        </div>
+        <p class="copyright">Made with &hearts; — 2026</p>
+    </footer>
+
+    <!-- ===== Xem ảnh lớn (Lightbox) ===== -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lb-close" id="lbClose" aria-label="Đóng">&times;</button>
+        <img src="" alt="Ảnh đám cưới" id="lbImg">
+    </div>
+
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="./wedding.js"></script>
+</body>
+</html>
+
